@@ -1,0 +1,9 @@
+# simplest form pod yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-yaml
+spec:
+  containers:
+  - image: nginx
+    name: nginx
