@@ -30,3 +30,12 @@ kubectl delete deploy <deployment-name>
 kubectl delete -f deploy.yaml
 kubectl delete deploy --all
 ```
+
+## troubleshooting
+
+```bash
+kubectl rollout status deploy <deployment-name>
+kubectl rollout history deploy <deployment-name>
+kubectl rollout undo deploy <deployment-name>
+kubectl rollout undo deploy <deployment-name> --to-revision=<n>
+```

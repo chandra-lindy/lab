@@ -2,9 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    kubectl.kubernetes.io/last-applied-configuration: '{}'
-  labels:
-    app: httpd-frontend
+    kubectl.kubernetes.io/last-applied-configuration: "{}"
   name: httpd-frontend
 spec:
   replicas: 3
@@ -13,10 +11,9 @@ spec:
       app: httpd-frontend
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: httpd-frontend
     spec:
       containers:
-      - image: httpd:2.4-alpine
-        name: httpd
+        - image: httpd:2.4-alpine
+          name: httpd
