@@ -4,6 +4,9 @@
 
 ```bash
 kubectl run <pod-name> --image <image-name>
+kubectl run <pod-name> --image <image-name> --command -- <command> <arg0>...<argn>
+kubectl run <pod-name> --image <image-name> -- <arg0>...<argn>
+kubectl run <pod-name> --image <image-name> --restart=Never --command -- <command> <arg0>...<argn>
 
 kubectl run <pod-name> --image=<image-name> --dry-run=client -o yaml > pod.yaml
 kubectl create -f pod.yaml --save-config
